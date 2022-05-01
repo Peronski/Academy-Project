@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Academy.FileHelper/1.0.0": {
+        "dependencies": {
+          "Academy.Entities": "1.0.0"
+        },
+        "runtime": {
+          "Academy.FileHelper.dll": {}
+        }
+      },
+      "Academy.Entities/1.0.0": {
+        "runtime": {
+          "Academy.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Academy.FileHelper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Academy.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

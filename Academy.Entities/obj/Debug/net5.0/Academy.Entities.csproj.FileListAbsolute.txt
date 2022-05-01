@@ -1,0 +1,16 @@
+D:\Fork\Academy.Project\Academy.Entities\bin\Debug\net5.0\Academy.Entities.exe
+D:\Fork\Academy.Project\Academy.Entities\bin\Debug\net5.0\Academy.Entities.deps.json
+D:\Fork\Academy.Project\Academy.Entities\bin\Debug\net5.0\Academy.Entities.runtimeconfig.json
+D:\Fork\Academy.Project\Academy.Entities\bin\Debug\net5.0\Academy.Entities.runtimeconfig.dev.json
+D:\Fork\Academy.Project\Academy.Entities\bin\Debug\net5.0\Academy.Entities.dll
+D:\Fork\Academy.Project\Academy.Entities\bin\Debug\net5.0\Academy.Entities.pdb
+D:\Fork\Academy.Project\Academy.Entities\obj\Debug\net5.0\Academy.Entities.csproj.AssemblyReference.cache
+D:\Fork\Academy.Project\Academy.Entities\obj\Debug\net5.0\Academy.Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\Fork\Academy.Project\Academy.Entities\obj\Debug\net5.0\Academy.Entities.AssemblyInfoInputs.cache
+D:\Fork\Academy.Project\Academy.Entities\obj\Debug\net5.0\Academy.Entities.AssemblyInfo.cs
+D:\Fork\Academy.Project\Academy.Entities\obj\Debug\net5.0\Academy.Entities.csproj.CoreCompileInputs.cache
+D:\Fork\Academy.Project\Academy.Entities\obj\Debug\net5.0\Academy.Entities.dll
+D:\Fork\Academy.Project\Academy.Entities\obj\Debug\net5.0\refint\Academy.Entities.dll
+D:\Fork\Academy.Project\Academy.Entities\obj\Debug\net5.0\Academy.Entities.pdb
+D:\Fork\Academy.Project\Academy.Entities\obj\Debug\net5.0\Academy.Entities.genruntimeconfig.cache
+D:\Fork\Academy.Project\Academy.Entities\obj\Debug\net5.0\ref\Academy.Entities.dll
