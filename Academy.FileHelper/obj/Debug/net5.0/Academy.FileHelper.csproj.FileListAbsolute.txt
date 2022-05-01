@@ -1,8 +1,3 @@
-D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.csproj.AssemblyReference.cache
-D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.GeneratedMSBuildEditorConfig.editorconfig
-D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.AssemblyInfoInputs.cache
-D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.AssemblyInfo.cs
-D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.csproj.CoreCompileInputs.cache
 D:\Fork\Academy.Project\Academy.FileHelper\bin\Debug\net5.0\Academy.Entities.deps.json
 D:\Fork\Academy.Project\Academy.FileHelper\bin\Debug\net5.0\Academy.Entities.runtimeconfig.json
 D:\Fork\Academy.Project\Academy.FileHelper\bin\Debug\net5.0\Academy.Entities.runtimeconfig.dev.json
@@ -15,6 +10,11 @@ D:\Fork\Academy.Project\Academy.FileHelper\bin\Debug\net5.0\Academy.FileHelper.d
 D:\Fork\Academy.Project\Academy.FileHelper\bin\Debug\net5.0\Academy.FileHelper.pdb
 D:\Fork\Academy.Project\Academy.FileHelper\bin\Debug\net5.0\Academy.Entities.dll
 D:\Fork\Academy.Project\Academy.FileHelper\bin\Debug\net5.0\Academy.Entities.pdb
+D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.csproj.AssemblyReference.cache
+D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.GeneratedMSBuildEditorConfig.editorconfig
+D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.AssemblyInfoInputs.cache
+D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.AssemblyInfo.cs
+D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.csproj.CoreCompileInputs.cache
 D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.csproj.CopyComplete
 D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\Academy.FileHelper.dll
 D:\Fork\Academy.Project\Academy.FileHelper\obj\Debug\net5.0\refint\Academy.FileHelper.dll

@@ -29,7 +29,10 @@ namespace Entities.Catalogs
             _catalogID = catalogID;
 
             foreach (Product product in products)
+            {
+                product.SetReferenceCatalog(_catalogID);
                 _productsQuantity.Add(product, 1);
+            }
         }
         #endregion
 

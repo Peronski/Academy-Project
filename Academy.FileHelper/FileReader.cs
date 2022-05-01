@@ -46,7 +46,7 @@ namespace FileHelper.Reader
 
                     Product product = new Product();
 
-                    product.SetInfoProduct(infoSingleProduct[0], int.Parse(infoSingleProduct[1]), int.Parse(infoSingleProduct[2]));
+                    product.SetInfoProduct(infoSingleProduct[0], int.Parse(infoSingleProduct[1]), int.Parse(infoSingleProduct[2]), "Gioielleria");
 
                     products.Add(product);
                 }
@@ -75,7 +75,7 @@ namespace FileHelper.Reader
 
                     if (infoSingleProduct[0].Equals(nameProduct))
                     {
-                        product.SetInfoProduct(infoSingleProduct[0], int.Parse(infoSingleProduct[1]), int.Parse(infoSingleProduct[2]));
+                        product.SetInfoProduct(infoSingleProduct[0], int.Parse(infoSingleProduct[1]), int.Parse(infoSingleProduct[2]), "Gioielli");
 
                         return product;
                     }
@@ -114,10 +114,11 @@ namespace FileHelper.Reader
                         for (int i = 2; i < infoSingleCatalog.Length; i++)
                         {
                             string productName = infoSingleCatalog[i].Trim();
+                            int quantity = int.Parse(infoSingleCatalog[i = 1].Trim());
                             Product product = GetProductInfoFromFileByName(productsDataPath, productName);
 
                             if(product != null)
-                                catalog.AddProduct(product);
+                                catalog.AddProduct(product, quantity);
                         }
                         catalogs.Add(catalog);
                     }

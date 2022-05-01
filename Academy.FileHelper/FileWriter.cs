@@ -67,7 +67,7 @@ namespace FileHelper.Writer
                 //stringBuilder.Append("CatalogProducts: ");
                 foreach (KeyValuePair<Product, int> pair in catalog.ProductsQuantity )
                 {
-                    stringBuilder.Append($"{pair.Key.ProductName}; {pair.Value}");
+                    stringBuilder.Append($"{pair.Key.ProductName}; {pair.Value};");
                 }
             }
 

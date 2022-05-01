@@ -6,8 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Academy.DatabaseLinker\Academy.DatabaseUtility.csproj" />
-    <ProjectReference Include="..\Academy.FileHelper\Academy.FileHelper.csproj" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
 </Project>
