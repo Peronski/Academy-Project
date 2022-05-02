@@ -46,11 +46,10 @@ namespace FileHelper.Reader
 
                     Product product = new Product();
 
-                    product.SetInfoProduct(infoSingleProduct[0], int.Parse(infoSingleProduct[1]), int.Parse(infoSingleProduct[2]), "Gioielleria");
+                    product.SetInfoProduct(int.Parse(infoSingleProduct[0]), infoSingleProduct[1], int.Parse(infoSingleProduct[2]), infoSingleProduct[3], int.Parse(infoSingleProduct[4]));
 
                     products.Add(product);
                 }
-
                 return products;
             }
         }
@@ -73,9 +72,9 @@ namespace FileHelper.Reader
 
                     string[] infoSingleProduct = row.Split(";"); // se non ho idea di quante informazioni otterro'?
 
-                    if (infoSingleProduct[0].Equals(nameProduct))
+                    if (infoSingleProduct[1].Trim().Equals(nameProduct))
                     {
-                        product.SetInfoProduct(infoSingleProduct[0], int.Parse(infoSingleProduct[1]), int.Parse(infoSingleProduct[2]), "Gioielli");
+                        product.SetInfoProduct(int.Parse(infoSingleProduct[0]), infoSingleProduct[1], int.Parse(infoSingleProduct[2]), infoSingleProduct[3], int.Parse(infoSingleProduct[4]));
 
                         return product;
                     }
@@ -103,22 +102,24 @@ namespace FileHelper.Reader
 
                     string[] infoSingleCatalog = row.Split(";"); // se non ho idea di quante informazioni otterro'?
 
-                    Catalog catalog = new Catalog(infoSingleCatalog[0], int.Parse(infoSingleCatalog[1]));
+                    Catalog catalog = new Catalog(infoSingleCatalog[0], int.Parse(infoSingleCatalog[1]), infoSingleCatalog[2]);
 
-                    if (infoSingleCatalog[2].Equals("Empty;"))
+                    if (infoSingleCatalog[3].Equals("Empty;"))
                     {
                         catalogs.Add(catalog);
                     }
                     else
                     {
-                        for (int i = 2; i < infoSingleCatalog.Length; i++)
+                        for (int i = 3; i < infoSingleCatalog.Length - 1; i++ )
                         {
                             string productName = infoSingleCatalog[i].Trim();
-                            int quantity = int.Parse(infoSingleCatalog[i = 1].Trim());
+                            int quantity = int.Parse(infoSingleCatalog[i + 1].Trim());
                             Product product = GetProductInfoFromFileByName(productsDataPath, productName);
 
                             if(product != null)
                                 catalog.AddProduct(product, quantity);
+
+                            i++; //TODO: fa schifo
                         }
                         catalogs.Add(catalog);
                     }

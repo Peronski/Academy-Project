@@ -10,40 +10,46 @@ namespace Entities.Products
     {
         #region Constructor
         public Product() { }
-        public Product(string productName, int productID)
+
+        public Product(int productID, string productName, string category, float price)
         {
-            _productName = productName; 
-            _productID = productID; 
+            _productName = productName;
+            _productID = productID;
+            _category = category;
+            _productPrice = price;
         }
         #endregion
 
         #region Private Variables
-        private string _productName;
         private int _productID;
+        private string _productName;
         private int _referenceCatalogID;
         private string _category;
+        private float _productPrice;
         #endregion
 
         #region Public Variables
         #endregion
 
         #region Properties
-        public string ProductName => _productName; 
         public int ProductID => _productID;
+        public string ProductName => _productName; 
         public int CatalogID => _referenceCatalogID;
-        public string Category => _category; 
+        public string Category => _category;
+        public float ProductPrice => _productPrice;
         #endregion
 
         #region Private Methods
         #endregion
 
         #region Public Methods
-        public void SetInfoProduct(string productName, int productID, int catalogID, string category)
+        public void SetInfoProduct( int productID, string productName, int catalogID, string category, float price)
         {
+            _productID = productID;
             _productName = productName;
-            _productID = productID;   
             _referenceCatalogID = catalogID;
             _category = category; ;
+            _productPrice = price;
         }
 
         public void SetReferenceCatalog(int catalogID)
@@ -53,7 +59,7 @@ namespace Entities.Products
 
         public override string ToString()
         {
-            return $"Product Name: {_productName}; Product ID: {_productID}; Reference Catalog ID: {_referenceCatalogID}; Category: {Category}.";
+            return $"Name: {_productName}; ID: {_productID}; Price: {ProductPrice}; Category: {Category}; Reference Catalog ID: {_referenceCatalogID}.";
         }
         #endregion
     }

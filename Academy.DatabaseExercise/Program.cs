@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Entities.Products;
 using Entities.Catalogs;
 using FileHelper.Reader;
@@ -13,24 +14,30 @@ namespace Academy.DatabaseExercise
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // *** Creazione oggetti ***
 
-            Product anello = new Product("Anello", 101);
-            Product bracciale = new Product("Bracciale", 102);
-            Product collana = new Product("Collana", 103);
-            Product orecchini = new Product("Orecchini", 104);
+            //Product anello = new Product(101, "Anello", "Gioielli", 99f);
+            //Product bracciale = new Product(102, "Bracciale", "Gioielli", 129f);
+            //Product collana = new Product(103, "Collana", "Gioielli", 230f);
+            //Product orecchini = new Product(104, "Orecchini", "Gioielli", 75f);
 
-            Catalog catalog = new Catalog("Gioielli", 1, anello, bracciale, collana, orecchini);
+            //Catalog catalog = new Catalog("Catalogo Gioielli", 1, "Gioielli", anello, bracciale, collana, orecchini);
 
-            //FileWriter.AddCatalog(catalog, DATA_PATH_CATALOGHI, true);
-            //FileWriter.AddProduct(orecchini, DATA_PATH_PRODOTTI, true);
+            // *** Scrittura file ***
+
+            //FileWriter.AddProduct(anello, DATA_PATH_PRODOTTI, true);
             //FileWriter.AddProduct(bracciale, DATA_PATH_PRODOTTI, true);
             //FileWriter.AddProduct(collana, DATA_PATH_PRODOTTI, true);
             //FileWriter.AddProduct(orecchini, DATA_PATH_PRODOTTI, true);
 
-            FileWriter.AddCatalog(catalog, DATA_PATH_CATALOGHI, true);
+            //FileWriter.AddCatalog(catalog, DATA_PATH_CATALOGHI, true);
 
-            //FileReader.ReadCatalogs(DATA_PATH_CATALOGHI, DATA_PATH_PRODOTTI);
+            // *** Lettura file ***
+
+            List<Catalog> catalogs = FileReader.ReadCatalogs(DATA_PATH_CATALOGHI, DATA_PATH_PRODOTTI);
+
+            foreach (Catalog catalog in catalogs)
+                Console.WriteLine(catalog.ToString());
         }
     }
 }

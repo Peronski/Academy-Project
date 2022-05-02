@@ -36,7 +36,7 @@ namespace FileHelper.Writer
         public static void AddProduct(Product product, string dataPath, bool appendInFile)
         {
             //string infoProduct = $"ProductName: {product.ProductName}; ProductID: {product.ProductID}; ProductQuantity: {product.Quantity};";
-            string infoProduct = $"{product.ProductName}; {product.ProductID}; {product.CatalogID};";
+            string infoProduct = $"{product.ProductID}; {product.ProductName}; {product.CatalogID}; {product.Category}; {product.ProductPrice};";
 
             using (StreamWriter streamWriter = new StreamWriter(dataPath, appendInFile))
             {
@@ -55,7 +55,7 @@ namespace FileHelper.Writer
             StringBuilder stringBuilder = new StringBuilder();
 
             //stringBuilder.Append($"CatalogName: {catalog.CatalogName}; CatalogID: {catalog.CatalogID}; ");
-            stringBuilder.Append($"{catalog.CatalogName}; {catalog.CatalogID}; ");
+            stringBuilder.Append($"{catalog.CatalogName}; {catalog.CatalogID}; {catalog.Category}; ");
 
             if (catalog.ProductsQuantity.Count <= 0)
             {

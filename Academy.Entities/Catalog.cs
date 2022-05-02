@@ -16,17 +16,19 @@ namespace Entities.Catalogs
             _catalogID = catalogID;
         }
 
-        public Catalog(string catalogName, int catalogID, Dictionary<Product, int> productQuantities)
+        public Catalog(string catalogName, int catalogID, string category, Dictionary<Product, int> productQuantities)
         {
             _catalogName = catalogName;
             _catalogID = catalogID;
+            _category = category;
             _productsQuantity = productQuantities;
         }
 
-        public Catalog(string catalogName, int catalogID, params Product[] products)
+        public Catalog(string catalogName, int catalogID, string category, params Product[] products)
         {
             _catalogName = catalogName;
             _catalogID = catalogID;
+            _category = category;
 
             foreach (Product product in products)
             {
@@ -37,8 +39,9 @@ namespace Entities.Catalogs
         #endregion
 
         #region Private Variables
-        private string _catalogName;
         private int _catalogID;
+        private string _catalogName;
+        private string _category;
         private Dictionary<Product, int> _productsQuantity = new Dictionary<Product, int>();
         #endregion
 
@@ -48,7 +51,8 @@ namespace Entities.Catalogs
         #region Properties
         public string CatalogName => _catalogName; 
         public int CatalogID => _catalogID; 
-        public Dictionary<Product, int> ProductsQuantity => _productsQuantity; 
+        public Dictionary<Product, int> ProductsQuantity => _productsQuantity;
+        public string Category => _category;
         #endregion
 
         #region Private Methods
