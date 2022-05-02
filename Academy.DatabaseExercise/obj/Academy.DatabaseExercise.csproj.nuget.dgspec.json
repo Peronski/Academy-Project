@@ -88,7 +88,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Fork\\Academy.Project\\Academy.Entities\\Academy.Entities.csproj": {
+                "projectPath": "D:\\Fork\\Academy.Project\\Academy.Entities\\Academy.Entities.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

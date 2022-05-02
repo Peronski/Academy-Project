@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities.Products;
 using System.Data.SqlClient;
 
 namespace DatabaseUtility.Reader
@@ -26,23 +27,30 @@ namespace DatabaseUtility.Reader
         #endregion
 
         #region Public Methods
-        public void ConfigureConnectionParameter(string dataSourceName, string dataBaseName, bool integratedSecurity, float connectionTimeOut)
+        public static void ConfigureConnectionParameter(string dataSourceName, string dataBaseName, bool integratedSecurity, float connectionTimeOut)
         {
             CONNECTION_STRING = $"data source={dataSourceName};database={dataBaseName};Integrated Security={integratedSecurity};connection timeout={connectionTimeOut}";
         }
 
-        public static Object GetInfoFromDatabase(string param)
+        public static string CreateConnectionString(string dataSourceName, string dataBaseName, bool integratedSecurity, float connectionTimeOut)
         {
-            using(SqlConnection connection = new SqlConnection(CONNECTION_STRING))
+            return CONNECTION_STRING = $"data source={dataSourceName};database={dataBaseName};Integrated Security={integratedSecurity};connection timeout={connectionTimeOut}";
+        }
+
+        public static List<Product> GetProductsFromDatabase(string connectionString)
+        {
+            List<Product> products = new List<Product>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = @"SELECT [Attr.],
-                                        [Attr.],
-                                 FROM [Database].[dbo].[Attr.]
-                                 WHERE [Attr] = @parametro ";
+                string query = @"SELECT [ProdottoID],
+                                        [NomeProdotto],
+                                        [CatalogoID],
+                                        [Categoria],
+                                        [Prezzo]
+                                FROM [Cataloghi].[dbo].[Prodotto]";
 
                 SqlCommand command = new SqlCommand(query, connection);
-
-                command.Parameters.AddWithValue(@"parametro", param);
 
                 connection.Open();
 
@@ -50,14 +58,16 @@ namespace DatabaseUtility.Reader
                 {
                     while (reader.Read())
                     {
-                        // logic on single reading
-                        //reader[Attr.] leggo valore per attributo risultato query
+                        Product product = new Product();
 
-                        return null;
+                        product.SetInfoProduct(int.Parse(reader[0].ToString()), reader[1].ToString(), int.Parse(reader[2].ToString()), reader[3].ToString(), float.Parse(reader[4].ToString()));
+
+                        if(product != null)
+                            products.Add(product);
                     }
                 }
 
-                return null;
+                return products;
             }
         }
         #endregion

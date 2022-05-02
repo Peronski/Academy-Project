@@ -4,6 +4,7 @@ using Entities.Products;
 using Entities.Catalogs;
 using FileHelper.Reader;
 using FileHelper.Writer;
+using DatabaseUtility.Reader;
 
 namespace Academy.DatabaseExercise
 {
@@ -34,10 +35,20 @@ namespace Academy.DatabaseExercise
 
             // *** Lettura file ***
 
-            List<Catalog> catalogs = FileReader.ReadCatalogs(DATA_PATH_CATALOGHI, DATA_PATH_PRODOTTI);
+            //List<Catalog> catalogs = FileReader.ReadCatalogs(DATA_PATH_CATALOGHI, DATA_PATH_PRODOTTI);
 
-            foreach (Catalog catalog in catalogs)
-                Console.WriteLine(catalog.ToString());
+            //foreach (Catalog catalog in catalogs)
+            //    Console.WriteLine(catalog.ToString());
+
+            string connectionString = DatabaseReader.CreateConnectionString("BARBARAGNO", "Cataloghi", true, 3600);
+
+            List<Product> products = DatabaseReader.GetProductsFromDatabase(connectionString);
+
+            foreach (Product product in products)
+            {
+                Console.WriteLine(product);
+            }
+
         }
     }
 }
